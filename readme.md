@@ -28,6 +28,24 @@ while($teacher = $teachers->fetch_object()) {
   echo $teacher->name . "\n";
 }
 ~~~
+with html table as stated on video
+~~~php
+<?php while($teacher =$teachers->fetch_object()) : ?>
+  <tr>
+    <td><?php echo $teacher->id; ?></td>
+    <td><?php echo $teacher->name; ?></td>
+    <td><?php echo $teacher->email; ?></td>
+  </tr>
+<?php endwhile; ?>
+~~~
+### how to execute php 
+We can execute php in terminal(cmd) or browser using server.     
+To execute php in teminal(cmd) we will write file name after `php`. Like `php read.php`    Or we can make a mini php server and browse in our website     
+####  Make php mini server
+~~~bash
+php -S localhost:8000
+~~~
+Now if we go to web browser and visit http://localhost:8000 we can access those php file
 ### updating a row in database
 
 ~~~php
